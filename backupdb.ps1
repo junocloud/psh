@@ -11,7 +11,7 @@ $Path = $BackupDirs
 $Daysback = "-1"
  
 
-#STOP-no changes from here
+#STOP-no changes here
 $CurrentDate = Get-Date
 $DatetoDelete = $CurrentDate.AddDays($Daysback)
 Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | Remove-Item
